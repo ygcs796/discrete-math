@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://xmuxsqrrj8yv"]
+
+[ext_resource type="Script" uid="uid://bfio0rttyg3jj" path="res://scripts/menu.gd" id="1_dc0yw"]
+
+[node name="menu" type="Control" unique_id=1934201191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dc0yw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=541327695]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -172.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="VBoxContainer" unique_id=1791493339]
+layout_mode = 2
+theme_override_font_sizes/font_size = 87
+text = "Discrete Math"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1398183544]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="play" type="Button" parent="VBoxContainer" unique_id=1578462721]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "Let's learn!"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1662318890]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="credits" type="Button" parent="VBoxContainer" unique_id=1814071269]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "Credits"
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer" unique_id=1721349418]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=731699586]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "Quit"
+
+[connection signal="button_down" from="VBoxContainer/credits" to="." method="_on_credits_button_down"]
+[connection signal="button_down" from="VBoxContainer/quit" to="." method="_on_quit_button_down"]
