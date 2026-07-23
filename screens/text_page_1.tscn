@@ -25,16 +25,6 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=2055538488]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "		\"Let's reflect: if you divide 25 by 4 and you want to only work with intergers , you will have 2 results:\",
-		\"the quotient that is equal to 6...\",
-		\"and the rest that is 1\" ,
-		\"If you need the rest of a dividing operation, you can just say that you want the result of '25 mod 4'\",
-		\"That operation doesn't exist in your calculator\",
-		\"When we resolve problems with that operation, we are using the 'Module Arithmetic'\" ,
-		\"How can you use that?\",
-		\"Well, you can use it in criptograph...\",
-		\"getting a randomic number...\",
-		\"or just converting the hour to a 12-hour format.\""
 autowrap_mode = 1
 
 [node name="next_button" type="Button" parent="VBoxContainer" unique_id=1596419324]
