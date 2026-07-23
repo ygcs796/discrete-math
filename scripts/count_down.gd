@@ -1,6 +1,7 @@
 extends Control
 
 @onready var count_down = $Label;
+signal countdown_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +11,7 @@ func _ready() -> void:
 		else:
 			count_down.text = "00:" + str(segundo)
 		await get_tree().create_timer(1.0).timeout
+	countdown_finished.emit()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

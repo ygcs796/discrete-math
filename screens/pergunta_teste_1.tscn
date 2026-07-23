@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://ys3xx65e07ja"]
+
+[ext_resource type="Script" uid="uid://cgaj7w7dcvbqx" path="res://scripts/pergunta_teste_1.gd" id="1_ys153"]
+[ext_resource type="PackedScene" uid="uid://b4r1j2kggrmae" path="res://elements/count_down.tscn" id="2_aj2e8"]
+
+[node name="pergunta_teste1" type="Control" unique_id=1265472410]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ys153")
+
+[node name="count-down" parent="." unique_id=1364557109 instance=ExtResource("2_aj2e8")]
+layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=778619268]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 126.0
+offset_top = -125.0
+offset_right = -126.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27450982)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1496219685]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer" unique_id=1261347245]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Let me ask you: what is the result of 12 mod 5?"
+autowrap_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/VBoxContainer" unique_id=42494733]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1918917357]
+layout_mode = 2
+
+[node name="option1" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=216761157]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "1"
+
+[node name="option2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1213979941]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "2"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=126800840]
+layout_mode = 2
+
+[node name="option3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=304952753]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "3"
+
+[node name="option4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=319025165]
+custom_minimum_size = Vector2(0, 53)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "4"
+
+[connection signal="countdown_finished" from="count-down" to="." method="_on_countdown_countdown_finished"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer/option1" to="." method="_on_option_1_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer/option2" to="." method="_on_option_2_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer2/option3" to="." method="_on_option_3_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/HBoxContainer2/option4" to="." method="_on_option_4_button_down"]

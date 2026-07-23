@@ -10,16 +10,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_quit_button_down() -> void:
+
+func _on_quit_btn_button_down() -> void:
 	get_tree().quit()
 	pass # Replace with function body.
 
 
-func _on_credits_button_down() -> void:
-	get_tree().change_scene_to_file("res://screens/credits.tscn")
-	pass # Replace with function body.
-
-
-func _on_play_button_down() -> void:
-	get_tree().change_scene_to_file("res://screens/text_page_1.tscn")
+func _on_menu_btn_button_down() -> void:
+	get_tree().change_scene_to_file("res://screens/menu.tscn")
 	pass # Replace with function body.

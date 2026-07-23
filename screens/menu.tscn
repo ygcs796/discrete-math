@@ -58,5 +58,6 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 37
 text = "Quit"
 
+[connection signal="button_down" from="VBoxContainer/play" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="VBoxContainer/credits" to="." method="_on_credits_button_down"]
 [connection signal="button_down" from="VBoxContainer/quit" to="." method="_on_quit_button_down"]

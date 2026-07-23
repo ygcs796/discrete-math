@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hf0d622vxjcp"]
 
 [ext_resource type="Texture2D" uid="uid://b2q37p5x4rcst" path="res://icon.svg" id="1_j0jnr"]
+[ext_resource type="Script" uid="uid://1jls2j54djc1" path="res://scripts/credits.gd" id="1_qkjnt"]
 
 [node name="credits" type="Control" unique_id=1471618034]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qkjnt")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=486457767]
 layout_mode = 1
@@ -35,3 +37,18 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "DEV: Yuri Gabryel"
 horizontal_alignment = 1
+
+[node name="menu_btn" type="Button" parent="VBoxContainer" unique_id=1535719585]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "BACK TO MENU"
+
+[node name="quit_btn" type="Button" parent="VBoxContainer" unique_id=1465451606]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "QUIT"
+
+[connection signal="button_down" from="VBoxContainer/menu_btn" to="." method="_on_menu_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/quit_btn" to="." method="_on_quit_btn_button_down"]
