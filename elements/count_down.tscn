@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b4r1j2kggrmae"]
+
+[ext_resource type="Script" uid="uid://w3p08ngllvmk" path="res://scripts/count_down.gd" id="1_8bqqb"]
+
+[node name="count-down" type="Control" unique_id=1364557109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8bqqb")
+
+[node name="Label" type="Label" parent="." unique_id=1620378555]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 164.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 60
+text = "00:30"

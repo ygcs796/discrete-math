@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bipp8e4st843a"]
+
+[ext_resource type="Script" uid="uid://uwp1osmy33gf" path="res://scripts/victory.gd" id="1_fy80t"]
+
+[node name="victory" type="Control" unique_id=1925193676]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fy80t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2021178513]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=731034825]
+layout_mode = 2
+theme_override_font_sizes/font_size = 87
+text = "PARABÉNS"
+horizontal_alignment = 1
+
+[node name="back_beginning" type="Button" parent="VBoxContainer" unique_id=752260274]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "BACK TO BEGINNING"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=1283881383]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 37
+text = "QUIT"
+
+[connection signal="button_down" from="VBoxContainer/back_beginning" to="." method="_on_back_beginning_button_down"]
+[connection signal="button_down" from="VBoxContainer/quit" to="." method="_on_quit_button_down"]

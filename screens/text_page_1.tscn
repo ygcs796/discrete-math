@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://h5bfh1a32fms"]
 
+[ext_resource type="Script" uid="uid://btm0ousracou8" path="res://scripts/text_page_1.gd" id="1_8n5n0"]
+
 [node name="text_page_1" type="Control" unique_id=273240199]
 layout_mode = 3
 anchors_preset = 15
@@ -7,21 +9,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8n5n0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2005141750]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
+offset_top = -21.0
+offset_bottom = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=2055538488]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Let's reflect: if you divide 25 by 4 and you want to only work with intergers , you will have 2 results: the quotient that is equal to 6 and the rest that is 1. If you need the rest of a dividing operation, you can just say that you want \"25 mod 4\".
-
-That operation doesn't exist in your calculator
-
-How can you use that? Well, you can use it in criptograph, getting a randomic number or just converting the hour to a 12-hour format."
 autowrap_mode = 1
