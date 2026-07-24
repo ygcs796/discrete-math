@@ -25,6 +25,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=2055538488]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
+text = "Texto"
 autowrap_mode = 1
 
 [node name="next_button" type="Button" parent="VBoxContainer" unique_id=1596419324]
